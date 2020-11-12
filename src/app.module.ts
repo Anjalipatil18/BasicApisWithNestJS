@@ -8,7 +8,7 @@ import { CoursesModule } from './courses/courses.module';
 @Module({
   imports: [CoursesModule,
             MongooseModule.forRoot(
-            'mongodb+srv://testDemo:test1@cluster0.mmvv8.mongodb.net/nestjs-demo?retryWrites=true&w=majority'
+            process.env.MONGO_URL
            )
           ],
   controllers: [AppController],

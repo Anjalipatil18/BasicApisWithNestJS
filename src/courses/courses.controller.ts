@@ -58,6 +58,6 @@ export class CoursesController {
         return null;
     }
    
-    }
+}
 
 

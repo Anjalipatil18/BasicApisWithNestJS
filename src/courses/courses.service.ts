@@ -26,13 +26,14 @@ export class CoursesService {
 
     async getCourses(){
         const courses = await this.courseModel.find().exec();
-        return courses.map(course=>({
+        const result= courses.map(course=>({
             id:course.id,
             title:course.title,
             description:course.description,
             author:course.author,
             url:course.url
         }));
+        return courses;
     }
 
     async getSingleCourse(courseId:string){
